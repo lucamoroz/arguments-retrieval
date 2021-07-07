@@ -7,7 +7,7 @@ index: build-jar index
 
 build-jar:
 	# Build Lucene-based jar
-	cd indexing && ./mvnw.cmd clean package -DskipTests=true -e
+	cd indexing && ./mvnw clean package -DskipTests=true -e
 
 build-trec:
 	# Build trec to evaluate performance

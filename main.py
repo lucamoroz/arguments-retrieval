@@ -129,6 +129,7 @@ def remove_duplicate_documents(documents):
 
 def save_run(documents, directory, args):
     # Save runfile
+    print("Saving files")
     rank = 0
     # Get lowest query id (should be 1)
     query_counter = documents[0]['queryId']
@@ -258,7 +259,7 @@ def parse_args(args):
     parser.add_argument('--beta', type=float, default=0.2)
     parser.add_argument('--nrerank', type=int, default=5)
     parser.add_argument('--judgements', type=str, default="none")
-    parser.add_argument('--test', type=str, default="yes")
+    parser.add_argument('--test', type=str, default="no")
 
     arguments = parser.parse_args(args)
     if arguments.test == "yes":
